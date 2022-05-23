@@ -23,17 +23,17 @@ public class LineDetection {
 
         for (Point p: points) {
             for (var lineEntry: lineMap.entrySet()) {
-                if(lineEntry.getKey().belongs(p))
+                if(lineEntry.getKey().passThrough(p))
                     lineEntry.getValue().add(p);
             }
         }
 
-        List<List<Point>> linesGreaterN = new ArrayList<>();
+        List<List<Point>> filteredLines = new ArrayList<>();
         for(var lineEntry: lineMap.entrySet()) {
             if(lineEntry.getValue().size() >= n)
-                linesGreaterN.add(lineEntry.getValue());
+                filteredLines.add(lineEntry.getValue());
         }
 
-        return linesGreaterN;
+        return filteredLines;
     }
 }

@@ -17,7 +17,7 @@ public final class Line {
         }
     }
 
-    public boolean belongs(Point p) {
+    public boolean passThrough(Point p) {
         if(slope == Float.MAX_VALUE) {
             return p.x == intersect;
         }
