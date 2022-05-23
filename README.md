@@ -23,4 +23,4 @@ To run the server, use the command:
 java -jar "target/rest_example-0.0.1-SNAPSHOT.jar"
 ```
 
-Then use a simple REST client to test the API.
+Then use a simple REST client to test the API on `localhost` with port `8080`.
